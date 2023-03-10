@@ -39,6 +39,36 @@ app.get('/', function (req, res) {
     res.send('Live Mas Adoptions')
 });
 
+// When a GET request is sent to `/seedPets`, the pets collection is seeded
+app.get('/seedPets', function (req, res) {
+    // Remove any existing pets
+    db.Pet.deleteMany({})
+        .then(removedPets => {
+            console.log(`Removed ${removedPets.deletedCount} tweets`)
+            // Seed the pets collection with the seed data
+            db.Pet.insertMany(db.seedPets)
+                .then(addedPets => {
+                    console.log(`Added ${addedPets.length} pets to be adopted`)
+                    res.json(addedPets)
+                })
+        })
+});
+
+// When a GET request is sent to `/seedVolunteers`, the volunteers collection is seeded
+app.get('/seedVolunteers', function (req, res) {
+    // Remove any existing volunteers
+    db.Volunteer.deleteMany({})
+        .then(removedVolunteers => {
+            console.log(`Removed ${removedVolunteers.deletedCount} dudes`)
+            // Seed the volunteers collection with the seed data
+            db.Volunteer.insertMany(db.seedPets)
+                .then(addedVolunteers => {
+                    console.log(`Added ${addedVolunteers.length} volunteers to help out`)
+                    res.json(addedVolunteers)
+                })
+        })
+});
+
 /* Tell the app to listen on the specified port
 --------------------------------------------------------------- */
 app.listen(process.env.PORT, function () {
