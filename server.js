@@ -9,7 +9,7 @@ const connectLiveReload = require('connect-livereload')
 /* Require the routes in the controllers folder
 --------------------------------------------------------------- */
 const petsCtrl = require('./controllers/pets')
-
+const volunteersCtrl = require('./controllers/volunteers')
 
 /* Require the db connection, models, and seed data
 --------------------------------------------------------------- */
@@ -77,6 +77,7 @@ app.get('/seedVolunteer', function (req, res) {
 // This tells our app to look at the `controllers/pets.js` file 
 // to handle all routes that begin with `localhost:3000/pets`
 app.use('/pets', petsCtrl)
+app.use('/volunteers', volunteersCtrl)
 
 /* Tell the app to listen on the specified port
 --------------------------------------------------------------- */
