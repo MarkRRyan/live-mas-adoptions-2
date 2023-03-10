@@ -11,5 +11,7 @@ const mongodbUri = process.env.MONGODBURI;
 
 module.exports = {
     Pet: require('./pet'),
-    Volunteer: require('./volunteer')
+    Volunteer: require('./volunteer'),
+    seedPets: require('./seedPets'),
+    seedVolunteer: require('./seedVolunteer')
 }
