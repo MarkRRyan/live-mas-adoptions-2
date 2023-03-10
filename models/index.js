@@ -8,3 +8,8 @@ const mongodbUri = process.env.mongodbUri
     await mongoose.connect(mongodbUri);
     console.log('Mongoose is connected to', mongodbUri);
 })().catch(err => console.log('MongoDB connection erron:\n' + err))
+
+module.exports = {
+    Pet: require('./pet'),
+    Volunteer: require('./volunteer')
+}
