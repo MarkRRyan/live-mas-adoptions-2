@@ -1,0 +1,29 @@
+{
+  "name": "live-mas-adoptions-2",
+  "version": "1.0.0",
+  "description": "A remake of my old live mas adoptions application using EJS, MongoDB, Mongoose, Express, HTML, CSS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkRRyan/live-mas-adoptions-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkRRyan/live-mas-adoptions-2/issues"
+  },
+  "homepage": "https://github.com/MarkRRyan/live-mas-adoptions-2#readme",
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "livereload": "^0.9.3",
+    "mongoose": "^7.0.1"
+  }
+}
