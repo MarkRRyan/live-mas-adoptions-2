@@ -55,13 +55,13 @@ app.get('/seedPets', function (req, res) {
 });
 
 // When a GET request is sent to `/seedVolunteers`, the volunteers collection is seeded
-app.get('/seedVolunteers', function (req, res) {
+app.get('/seedVolunteer', function (req, res) {
     // Remove any existing volunteers
     db.Volunteer.deleteMany({})
         .then(removedVolunteers => {
             console.log(`Removed ${removedVolunteers.deletedCount} dudes`)
             // Seed the volunteers collection with the seed data
-            db.Volunteer.insertMany(db.seedPets)
+            db.Volunteer.insertMany(db.seedVolunteer)
                 .then(addedVolunteers => {
                     console.log(`Added ${addedVolunteers.length} volunteers to help out`)
                     res.json(addedVolunteers)
