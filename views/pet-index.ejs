@@ -10,7 +10,17 @@
 <body>
     <%- include('./partials/nav.ejs') %>
 
-<h1>Dog and Cats and stuff</h1>
+<main>
+    <% for (let pet of pets) { %>
+    <figure>
+        <img src="<%= pet.photo %>" alt="cat or dog">
+        <figcaption>
+            <h4><%= pet.name %>, age: <%= pet.age %> year(s) old</h4>
+            <a href="/pets/<%= pet._id %>">Learn More!</a>
+        </figcaption>
+    </figure>
+    <% } %>
+</main>
 
 
 
