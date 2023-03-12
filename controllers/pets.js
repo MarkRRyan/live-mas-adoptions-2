@@ -19,9 +19,18 @@ const db = require('../models')
 /* Routes
 --------------------------------------------------------------- */
 // Index Route (GET/Read): Will display all pets
+// router.get('/', function (req, res) {
+//     db.Pet.find({})
+//         .then(pets => res.json(pets))
+// })
+
 router.get('/', function (req, res) {
     db.Pet.find({})
-        .then(pets => res.json(pets))
+        .then(pets => {
+            res.render('pet-index', {
+                pets: pets
+            })
+        })
 })
 
 

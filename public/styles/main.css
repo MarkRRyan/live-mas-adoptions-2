@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+/* nav bar styling */
 header {
     align-items: center;
     background-color: maroon;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
     display: flex;
+    /* font-family: url('/public/assets/taco_bell_bold_by_629lyric-d8wmur8.ttf'); */
+    font-family: 'Climate Crisis', cursive;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
 }
 
 h1 {
@@ -28,4 +33,9 @@ nav a {
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
+}
+
+nav a:hover {
+    color: lightgray;
+    text-decoration: underline;
 }
