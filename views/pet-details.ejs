@@ -2,12 +2,22 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs', {title: 'Live Mas Adoptions | Pet Details'}) %>
+    <%- include('./partials/head.ejs', {title: `Live Mas Adoptions | ${pet.name}`}) %>
     <link rel="stylesheet" href="/styles/pet-details.css">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
-    <h1>Pet Details here</h1>
+    <div class="pet-detail-container">
+            <figure>
+                <img src="<%= pet.photo %>" alt="cat or dog">
+                <figcaption>
+                    <h4><%= pet.name %>, age: <%= pet.age %> year(s) old</h4>
+                    <p><%= pet.about %></p>
+                </figcaption>
+            </figure>
+    </div>
 </body>
+
+</html>

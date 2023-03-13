@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <%- include('./partials/head.ejs', {title: `Live Mas Adoptions | Volunteer Info`}) %>
+    <link rel="stylesheet" href="/volunteer-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="listings">
+            <ul>
+                <% for (let volunteer of volunteers) { %>
+                <li>
+                    <figure>
+                        <figcaption>
+                            <h4><%= volunteer.name %> <%= volunteer.email %> <%= volunteer.phoneNumber %></h4>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+
+</body>
+</html>

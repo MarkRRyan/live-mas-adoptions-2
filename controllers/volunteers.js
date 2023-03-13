@@ -14,6 +14,7 @@ const router = express.Router()
 /* Require the db connection, and models
 --------------------------------------------------------------- */
 const db = require('../models')
+const volunteer = require('../models/volunteer')
 // const volunteers = require('../models/seedVolunteer')
 
 
@@ -22,7 +23,11 @@ const db = require('../models')
 // Index Route (GET/Read): Will display all volunteers
 router.get('/', function (req, res) {
     db.Volunteer.find({})
-        .then(volunteers => res.json(volunteers))
+        .then(volunteers => {
+            res.render('volunteer-index', {
+                volunteers: volunteers
+            })
+        })
 })
 
 
