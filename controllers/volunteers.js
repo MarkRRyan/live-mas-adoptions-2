@@ -14,7 +14,7 @@ const router = express.Router()
 /* Require the db connection, and models
 --------------------------------------------------------------- */
 const db = require('../models')
-const volunteer = require('../models/volunteer')
+// const volunteer = require('../models/volunteer')
 // const volunteers = require('../models/seedVolunteer')
 
 
