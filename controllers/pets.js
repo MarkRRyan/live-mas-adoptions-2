@@ -38,7 +38,11 @@ router.get('/', function (req, res) {
 // using the URL parameter (which is the document _id)
 router.get('/:id', function (req, res) {
     db.Pet.findById(req.params.id)
-        .then(pet => res.json(pet))
+        .then(pet => {
+            res.render('pet-details', {
+                pet:pet
+            })
+        })
         .catch(() => res.send('404 Error: Page Not Found'))
 })
 
