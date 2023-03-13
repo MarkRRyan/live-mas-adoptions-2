@@ -4,7 +4,7 @@
 
 <head>
     <%- include('./partials/head.ejs', {title: `Live Mas Adoptions | Volunteer Info`}) %>
-    <link rel="stylesheet" href="/volunteer-index.css">
+    <link rel="stylesheet" href="/styles/volunteer-index.css">
 </head>
 
 <body>
@@ -12,12 +12,14 @@
 
     <main>
         <section class="listings">
+            <h2>Looking to Volunteer with us?!</h2>
+            <h3>Add Your Name to the List <a href="/volunteers/new-volunteer">HERE!</a></h3>
             <ul>
                 <% for (let volunteer of volunteers) { %>
                 <li>
                     <figure>
                         <figcaption>
-                            <h4><%= volunteer.name %> <%= volunteer.email %> <%= volunteer.phoneNumber %></h4>
+                            <h4><%= volunteer.name %> | <%= volunteer.email %> | <%= volunteer.phoneNumber %></h4>
                         </figcaption>
                     </figure>
                 </li>

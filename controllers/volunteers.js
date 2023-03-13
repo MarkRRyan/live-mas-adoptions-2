@@ -30,6 +30,20 @@ router.get('/', function (req, res) {
         })
 })
 
+// New Route (GET/Read): This route renders a form 
+// which the user will fill out to POST (create) a new location
+router.get('/new-volunteer', (req, res) => {
+    res.render('new-volunteer')
+})
+
+// Create Route (POST/Create): This route receives the POST request sent from the new route,
+// creates a new volunteer document using the form data, 
+// and redirects the user to the new volunteer's show page
+router.post('/', (req, res) => {
+    db.Volunteer.create(req.body)
+        .then(volunteer => res.redirect('/volunteers'))
+})
+
 
 // Show Route (GET/Read): Will display an individual volunteer document
 // using the URL parameter (which is the document _id)
@@ -38,6 +52,8 @@ router.get('/:id', function (req, res) {
         .then(volunteer => res.json(volunteer))
         .catch(() => res.send('404 Error: Page Not Found'))
 })
+
+
 
 
 /* Export these routes so that they are accessible in `server.js`
