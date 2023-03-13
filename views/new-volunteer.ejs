@@ -1,6 +1,29 @@
 <! DOCTYPE html>
 <html lang="en">
+
+<head>
+    <%- include('./partials/head', {title: 'Live Mas Adoptions | New Volunteer'}) %>
+    <link rel="stylesheet" href="/styles/volunteer-index.css">
+</head>
 <body>
-    <h1>Hi</h1>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="heading">
+        <h3>Add New Volunteer</h3>
+        <p>From all of us here at Live Mas Adoptions, we appricaite you coming and volunteering with us 🌮</p>
+    </div>
+
+    <form method="POST" action="/volunteers">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" email="email" required>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" phoneNumber="phoneNumber" required>
+
+        <input type="submit" value="Add Volunteer">
+    </form>
 </body>
 </html>
