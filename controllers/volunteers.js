@@ -47,9 +47,19 @@ router.post('/', (req, res) => {
 
 // Show Route (GET/Read): Will display an individual volunteer document
 // using the URL parameter (which is the document _id)
+// router.get('/:id', function (req, res) {
+//     db.Volunteer.findById(req.params.id)
+//         .then(volunteer => res.render(volunteer-detail))
+//         .catch(() => res.send('404 Error: Page Not Found'))
+// })
+
 router.get('/:id', function (req, res) {
     db.Volunteer.findById(req.params.id)
-        .then(volunteer => res.json(volunteer))
+        .then(volunteer => {
+            res.render('volunteer-details', {
+                volunteer: volunteer
+            })
+        })
         .catch(() => res.send('404 Error: Page Not Found'))
 })
 
