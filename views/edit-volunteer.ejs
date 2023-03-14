@@ -3,10 +3,14 @@
 
 <head>
     <%- include('./partials/head.ejs', {title: `${volunteer.name} | Live Mas Adoptions`}) %>
-    <link rel="stylesheet" href="/styles/volunteer-index">
+    <link rel="stylesheet" href="/styles/volunteer-index.css">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
+
+    <h2>Editing the information for: <%= volunteer.name %></h2>
+
+    <button class="btn"><a href="/volunteers">Back</a></button>
 </body>
 </html>

@@ -20,6 +20,12 @@
                     <figure>
                         <figcaption>
                             <h4><%= volunteer.name %> | <%= volunteer.email %> | <%= volunteer.phoneNumber %></h4>
+                            <div class="editing">
+                                <button class="btn"><a href="/volunteers/<%= volunteer._id %>/edit-volunteer">Edit</a></button>
+                                <form method="POST" action="/volunteers/<%= volunteer._id %>?_method=DELETE">
+                                    <input class="btn" type="submit" value="Delete">
+                                </form>
+                            </div>
                         </figcaption>
                     </figure>
                 </li>

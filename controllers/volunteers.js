@@ -53,7 +53,23 @@ router.get('/:id', function (req, res) {
         .catch(() => res.send('404 Error: Page Not Found'))
 })
 
+// Edit Route (GET/Read): This route renders a form
+// the user will use to PUT (edit) properties of an existing volunteer
+router.get('/:id/edit-volunteer', (req, res) => {
+    db.Volunteer.findById(req.params.id)
+        .then(volunteer => {
+            res.render('edit-volunteer', {
+                volunteer: volunteer
+            })
+        })
+})
 
+// Destroy Route (DELETE/Delete): This route deletes a volunteer document 
+// using the URL parameter (which will always be the volunteer document's ID)
+router.delete('/:id', (req, res) => {
+    db.Volunteer.findByIdAndRemove(req.params.id)
+        .then(() => res.redirect('/volunteers'))
+})
 
 
 /* Export these routes so that they are accessible in `server.js`
