@@ -64,6 +64,18 @@ router.get('/:id/edit-volunteer', (req, res) => {
         })
 })
 
+// Update Route (PUT/Update): This route receives the PUT request sent from the edit route, 
+// edits the specified pet document using the form data,
+// and redirects the user back to the show page for the updated location.
+router.put('/:id', (req, res) => {
+    db.Volunteer.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true }
+    )
+        .then(volunteer => res.redirect('/volunteers'))
+})
+
 // Destroy Route (DELETE/Delete): This route deletes a volunteer document 
 // using the URL parameter (which will always be the volunteer document's ID)
 router.delete('/:id', (req, res) => {
