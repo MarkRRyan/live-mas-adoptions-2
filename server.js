@@ -48,7 +48,12 @@ app.use(methodOverride('_method'));
 /* Mount routes
 --------------------------------------------------------------- */
 app.get('/', function (req, res) {
-    res.render('home')
+    db.Pet.find({ isFeatured: true })
+        .then(pets => {
+            res.render('home', {
+                pets: pets
+            })
+        })
 });
 
 // When a GET request is sent to `/seedPets`, the pets collection is seeded

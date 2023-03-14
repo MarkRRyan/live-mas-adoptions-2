@@ -26,7 +26,7 @@ nav ul {
     list-style: none;
 }
 
-nav li:not(:last-child) {
+nav a:not(:last-child) {
     margin-right: 1rem;
 }
 
