@@ -1,0 +1,35 @@
+<! DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head', {title: 'Live Mas Adoptions | New Pet'}) %>
+    <link rel="stylesheet" href="/styles/pet-index.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="heading">
+        <h3>Add New Volunteer</h3>
+        <p>From all of us here at Live Mas Adoptions, we appricaite you coming and volunteering with us 🌮</p>
+    </div>
+
+    <form method="POST" action="/pets">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="about">About:</label>
+        <input type="text" id="about" name="about" required>
+
+        <label for="photo">Photo Url:</label>
+        <input type="url" id="photo" name="photo" required>
+
+        <label for="isFeatured">Is Featured:</label>
+        <input type="checkbox" id="isFeatured" name="isFeatured" value="true">
+
+        <input type="submit" value="Add Pet">
+    </form>
+</body>
+</html>

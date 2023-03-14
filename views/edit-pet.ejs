@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: `${pet.name} | Live Mas Adoptions`}) %>
+    <link rel="stylesheet" href="/styles/volunteer-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <h2>Editing the information for: <%= pet.name %></h2>
+
+    <form method='POST' action="/pets/<%= pet._id %>?_method=PUT">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= pet.name %>"required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" value="<%= pet.age %>"required>
+
+        <label for="about">About:</label>
+        <input type="text" id="about" name="about" value="<%= pet.about %>" required>
+
+        <label for="photo">Photo Url:</label>
+        <input type="url" id="photo" name="photo" value="<%= pet.photo %>" required>
+
+        <label for="isFeatured">Is Featured:</label>
+        <input type="checkbox" id="isFeatured" name="isFeatured" <% if (pet.isFeatured) { %> checked <% } %> >
+
+        <input type="submit" value="Add Pet">
+    </form>
+
+    <button class="btn"><a href="/volunteers">Return to Volunteers</a></button>
+</body>
+</html>
