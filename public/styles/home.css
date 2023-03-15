@@ -53,9 +53,13 @@ body {
 .pet-grid li {
     width: calc(33% - 1rem);
     min-width: 300px;
-    background-color: #3e847b;
+    background-color: #bc8609;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
     border-radius: 5px;
+}
+
+.pet-grid li:hover {
+    background-color: #c1942b;
 }
 
 figure {
@@ -69,12 +73,12 @@ figure {
 }
 
 .featured-info a {
-    color: rgb(236, 115, 218);
+    color: rgb(43, 99, 190);
     text-decoration: none;
 }
 
 .featured-info a:hover {
-    color: rgb(242, 131, 150);
+    color: rgb(69, 106, 230);
     text-decoration: underline;
 }
 

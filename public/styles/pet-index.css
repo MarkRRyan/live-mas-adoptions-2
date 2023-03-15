@@ -15,16 +15,8 @@ body {
     text-align: center;
   }
 
-.container h1, h2 {
+.content {
     color: white;
-}
-
-.display {
-    text-decoration: underline;
-}
-
-.display:hover {
-    font-size: 3em;
 }
   
 .box {
@@ -44,6 +36,7 @@ body {
 }
 
 .pet-grid {
+    color: white;
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -51,12 +44,15 @@ body {
 }
 
 .pet-grid li {
-    /* width: calc(33% - 1rem); */
-    /* min-width: 300px; */
+    width: calc(100% - 1rem);
     background-color: #3e847b;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
     border-radius: 5px;
-    height: 391px;
+    height: 410px;
+}
+
+.pet-grid li:hover {
+    background-color: #219687;
 }
 
 figure {

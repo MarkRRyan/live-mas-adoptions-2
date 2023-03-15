@@ -61,11 +61,11 @@ app.get('/seedPets', function (req, res) {
     // Remove any existing pets
     db.Pet.deleteMany({})
         .then(removedPets => {
-            console.log(`Removed ${removedPets.deletedCount} tweets`)
+            console.log(`Removed ${removedPets.deletedCount} Taco Bell Lovin'`)
             // Seed the pets collection with the seed data
             db.Pet.insertMany(db.seedPets)
                 .then(addedPets => {
-                    console.log(`Added ${addedPets.length} pets to be adopted`)
+                    console.log(`Added ${addedPets.length} Taco Bell Lovin'`)
                     res.json(addedPets)
                 })
         })

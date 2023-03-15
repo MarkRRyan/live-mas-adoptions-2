@@ -41,7 +41,28 @@ const pets = [
         about: 'Crunchwrap Supreme is an interesting dog. He does not like men with beards or hats, and will bite them. Otherwise, he is definitely a dog, and definitely loves Taco Bell.',
         photo: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.images.express.co.uk%2Fimg%2Fdynamic%2F130%2F590x%2FEarl-594319.jpg&f=1&nofb=1',
         isFeatured: false
-    }
+    },
+    {
+        name: 'Cinnamon Twists',
+        age: '5',
+        about: 'Chill dog, loves music, fuzzy blankets, and of course, Taco Bell',
+        photo: 'https://i.imgur.com/QjGZsYE.jpg',
+        isFeatured: false
+    },
+    {
+        name: 'Quesarito',
+        age: '9',
+        about: 'The only thing this beauty love more than Taco Bell is posing for the camera. Get her good side!',
+        photo: 'https://i.imgur.com/9CadanF.jpg',
+        isFeatured: false
+    },
+    {
+        name: 'Spicy Double Steak Grilled Cheese Burrito',
+        age: '4',
+        about: 'While he might not look too spicy here, he loves his Taco Bell that way',
+        photo: 'https://i.imgur.com/S893n9R.jpg',
+        isFeatured: false
+    },
 ]
 
 
