@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
 body {
-    background-image: url('/assets/pattern-seamless-taco_105005-67.jpg');
+    background-image: url('/assets/2019-Blog-Wallpaper-10.jpg');
     /* background-attachment: cover; */
     margin: 0;
     padding: 0;
@@ -9,13 +11,17 @@ body {
     display: flex;
     justify-content: center;
     margin: 15px;
-    
+    font-family: 'Tilt Warp', cursive;
+  }
+
+  .container h1, h2 {
+    color: white;
   }
   
   .box {
     display: flex;
     border: 5px solid black;
-    background-color: rgba(37, 37, 37, 0.302);
+    background-color: rgba(37, 37, 37, 0.647);
     flex-direction: column;
     justify-content: center;
     height: fit-content;
@@ -33,23 +39,16 @@ body {
     padding: 2rem;
 }
 
-.featured-pets h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
 .pet-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
-    margin-top: 2rem;
 }
 
 .pet-grid li {
     width: calc(33% - 1rem);
     min-width: 300px;
-    margin-bottom: 2rem;
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -70,4 +69,22 @@ figcaption {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.links-elsewhere {
+    color: white;
+    font-size: 1em;
+}
+
+.link-list li {
+    list-style: none;
+}
+
+.link-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.link-list a:hover {
+    color: darkcyan;
 }
