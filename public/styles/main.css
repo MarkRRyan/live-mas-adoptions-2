@@ -47,6 +47,7 @@ nav a:hover {
   font-size: 1em;
   background-color: rgba(0, 0, 0, 0.337);
   border-top: 2px solid black;
+  text-align: center;
 }
 
 .link-list li {

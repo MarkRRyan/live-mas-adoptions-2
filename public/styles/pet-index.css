@@ -1,4 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
 body {
+    background-image: url('/assets/2019-Blog-Wallpaper-10.jpg');
+    /* background-attachment: cover; */
     margin: 0;
     padding: 0;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    font-family: 'Tilt Warp', cursive;
+    text-align: center;
+  }
+
+.container h1, h2 {
+    color: white;
+}
+
+.display {
+    text-decoration: underline;
+}
+
+.display:hover {
+    font-size: 3em;
+}
+  
+.box {
+    display: flex;
+    border: 5px solid black;
+    background-color: rgba(37, 37, 37, 0.647);
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    width: 90vw;
+}
+
+
+/* Featured pets section styles */
+.featured-pets {
+    padding: 2rem;
+}
+
+.pet-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.pet-grid li {
+    /* width: calc(33% - 1rem); */
+    /* min-width: 300px; */
+    background-color: #3e847b;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    height: 391px;
+}
+
+figure {
+    height: 60%;
+}
+
+.pet-grid img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.featured-info a {
+    color: rgb(236, 115, 218);
+    text-decoration: none;
+}
+
+.featured-info a:hover {
+    color: rgb(242, 131, 150);
+    text-decoration: underline;
+}
+
+figcaption {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
