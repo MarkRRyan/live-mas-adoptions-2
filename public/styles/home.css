@@ -1,5 +1,6 @@
 body {
-    background-image: url('/assets/513622.jpg');
+    background-image: url('/assets/pattern-seamless-taco_105005-67.jpg');
+    /* background-attachment: cover; */
     margin: 0;
     padding: 0;
 }
@@ -14,11 +15,11 @@ body {
   .box {
     display: flex;
     border: 5px solid black;
-    background-color: rgba(37, 37, 37, 0.504);
+    background-color: rgba(37, 37, 37, 0.302);
     flex-direction: column;
     justify-content: center;
     height: fit-content;
-    width: 85vw;
+    width: 90vw;
   }
 
 .container {
@@ -27,7 +28,17 @@ body {
   
 
 
-.pet-grid  {
+/* Featured pets section styles */
+.featured-pets {
+    padding: 2rem;
+}
+
+.featured-pets h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pet-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -40,13 +51,12 @@ body {
     min-width: 300px;
     margin-bottom: 2rem;
     background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    overflow: hidden;
 }
 
 figure {
-    height: 70%;
+    height: 60%;
 }
 
 .pet-grid img {
@@ -57,16 +67,7 @@ figure {
 
 figcaption {
     height: 30%;
-    padding: 1rem 2rem 0 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.featured-info h3 {
-    font-size: calc(1em + 0.5vw);
-}
-
-.featured-info p {
-    font-size: calc(0.5rem + 0.5vw);
+    justify-content: center;
 }

@@ -17,28 +17,28 @@
                 <h2>Are You READY TO LIVE MAS?!</h2>
             </div>
         <h1>HERE'S SOME OF OUR FAVORITE FUZZY FRIENDS</h1>
-        <div class="pet-grid">
-            <ul>
+        <section class="featured-pets">
+            <ul class="pet-grid">
+                <% for (let pet of pets) { %>
                 <li>
-                    <% for (let pet of pets) { %>
-                    <div>
-                        <figure>
-                            <img src="<%= pet.photo %>" alt="Kitten">
-                        </figure>
-                        <figcaption>
-                            <div class="featured-info">
-                                <h3><%= pet.name %></h3>
-                                <p>Age: <%= pet.age %> yr(s)</p>
-                            </div>
+                    <figure>
+                        <img src="<%= pet.photo %>" alt="Kitten">
+                    </figure>
+                    <figcaption>
+                        <div class="featured-info">
+                            <h3><%= pet.name %></h3>
+                            <p>Age: <%= pet.age %> yr(s)</p>
                             <a href="/pets/<%= pet._id %>" class="btn">Learn More</a>
-                        </figcaption>
-                    </div>
-                    <% } %>
+                        </div>
+                        
+                    </figcaption>
                 </li>
+                <% } %>
             </ul>
+        </section>
+        
         </div>
-        </div>
-      </div>
+    </div>
       
       
 
