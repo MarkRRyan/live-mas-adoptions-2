@@ -4,10 +4,9 @@
 /* nav bar styling */
 header {
     align-items: center;
-    background-color: maroon;
+    background-color: rgb(128, 0, 53);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
     display: flex;
-    /* font-family: url('/public/assets/taco_bell_bold_by_629lyric-d8wmur8.ttf'); */
     font-family: 'Climate Crisis', cursive;
     justify-content: space-between;
     padding: 0 1rem 0 1rem;
@@ -41,41 +40,25 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Style the button that triggers the dropdown menu */
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
+/* Footer */
+
+.links-elsewhere {
+  color: white;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.337);
+  border-top: 2px solid black;
+}
+
+.link-list li {
+  list-style: none;
+}
+
+.link-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.link-list a:hover {
+  color: darkcyan;
+  text-decoration: underline;
+}

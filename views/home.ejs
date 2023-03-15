@@ -1,53 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    
-<head>
+  <head>
     <%- include('./partials/head.ejs', {title: 'Live Mas Adoptions' }) %>
-    <link rel="stylesheet" href="/styles/home.css">
-</head>
+    <link rel="stylesheet" href="/styles/home.css" />
+  </head>
 
-<body>
+  <body>
     <%- include('./partials/nav.ejs') %>
-    
-    <div class="container">
-        <div class="box">
-            <div class="content">
-                <h1>Welcome to Live Mas Adoptions</h1>
-                <h2>Are You READY TO LIVE MAS?!</h2>
-            </div>
-        <h1>HERE'S SOME OF OUR FAVORITE FUZZY FRIENDS</h1>
-        <div class="featured-pets">
-            <ul class="pet-grid">
-                <% for (let pet of pets) { %>
-                <li>
-                    <figure>
-                        <img src="<%= pet.photo %>" alt="Kitten">
-                    </figure>
-                    <figcaption>
-                        <div class="featured-info">
-                            <h3><%= pet.name %></h3>
-                            <p>Age: <%= pet.age %> yr(s)</p>
-                            <a href="/pets/<%= pet._id %>" class="btn">Learn More</a>
-                        </div>
-                        
-                    </figcaption>
-                </li>
-                <% } %>
-            </ul>
-        </div>
-        <div class="links-elsewhere">
-            <ul class="link-list">
-                <h4>Want to Learn more?</h4>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/volunteers">Volunteering Opportunities</a></li>
-                <li><a href="/pets">See the Pets</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-      
-      
 
-</body>
+    <div class="container">
+      <div class="box">
+        <div class="content">
+          <h1>Welcome to Live Mas Adoptions</h1>
+          <h2>Are You READY TO LIVE MAS?!</h2>
+        </div>
+        <h1 class="display">HERE'S SOME OF OUR FAVORITE FUZZY FRIENDS</h1>
+        <div class="featured-pets">
+          <ul class="pet-grid">
+            <% for (let pet of pets) { %>
+            <li>
+              <figure>
+                <img src="<%= pet.photo %>" alt="Kitten" />
+              </figure>
+              <figcaption>
+                <div class="featured-info">
+                  <h3><%= pet.name %></h3>
+                  <p>Age: <%= pet.age %> yr(s)</p>
+                  <a href="/pets/<%= pet._id %>" class="btn">Learn More</a>
+                </div>
+              </figcaption>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+        <%- include('./partials/footer.ejs') %>
+      </div>
+    </div>
+  </body>
 </html>

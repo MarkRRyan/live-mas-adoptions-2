@@ -12,13 +12,22 @@ body {
     justify-content: center;
     margin: 15px;
     font-family: 'Tilt Warp', cursive;
+    text-align: center;
   }
 
-  .container h1, h2 {
+.container h1, h2 {
     color: white;
-  }
+}
+
+.display {
+    text-decoration: underline;
+}
+
+.display:hover {
+    font-size: 3em;
+}
   
-  .box {
+.box {
     display: flex;
     border: 5px solid black;
     background-color: rgba(37, 37, 37, 0.647);
@@ -26,12 +35,7 @@ body {
     justify-content: center;
     height: fit-content;
     width: 90vw;
-  }
-
-.container {
-    text-align: center;
 }
-  
 
 
 /* Featured pets section styles */
@@ -49,8 +53,8 @@ body {
 .pet-grid li {
     width: calc(33% - 1rem);
     min-width: 300px;
-    background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #3e847b;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
     border-radius: 5px;
 }
 
@@ -64,6 +68,16 @@ figure {
     object-fit: cover;
 }
 
+.featured-info a {
+    color: rgb(236, 115, 218);
+    text-decoration: none;
+}
+
+.featured-info a:hover {
+    color: rgb(242, 131, 150);
+    text-decoration: underline;
+}
+
 figcaption {
     height: 30%;
     display: flex;
@@ -71,20 +85,3 @@ figcaption {
     justify-content: center;
 }
 
-.links-elsewhere {
-    color: white;
-    font-size: 1em;
-}
-
-.link-list li {
-    list-style: none;
-}
-
-.link-list a {
-    color: white;
-    text-decoration: none;
-}
-
-.link-list a:hover {
-    color: darkcyan;
-}
